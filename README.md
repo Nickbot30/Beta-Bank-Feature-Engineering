@@ -4,6 +4,7 @@ Beta Bank Customer Churn Prediction
 Feature Engineering • Class Imbalance Handling • Model Optimization • F1 ≥ 0.59
 
 Project Overview
+
 Beta Bank is experiencing customer churn — clients are gradually leaving every month. Since retaining existing customers is significantly cheaper than acquiring new ones, the bank wants a predictive model that identifies customers at risk of leaving.
 Your task:
 Build a machine learning model that predicts customer churn with an F1 score ≥ 0.59 on the test dataset.  

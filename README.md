@@ -40,6 +40,7 @@ Exited	Target variable (1 = churned, 0 = stayed)
 
 
 🧹 Data Cleaning & Preparation
+
 1. Missing Values
 Tenure had 909 missing values (~9%).
 Missingness appeared random → removed rows with missing tenure.
@@ -74,6 +75,7 @@ You used a three‑way split:
 Stratified sampling preserved churn distribution across splits.
 
 Handling Class Imbalance
+
 Churned customers (class 1) were underrepresented.
 You tested three approaches:
 ✔ 1. Upsampling minority class
@@ -86,7 +88,8 @@ n_estimators=300
 max_depth=30
 
 Model Training & Comparison
-You trained and evaluated four models on the validation set:
+
+Trained and evaluated four models on the validation set:
 Model	Validation F1	Validation AUC
 Baseline Random Forest	0.5652	0.8522
 RF + Upsampling	0.5909	0.8577
@@ -95,11 +98,13 @@ RF + Upsampling + Tuning	0.6011	0.8596
 
 
 Winner:
- Random Forest + Upsampling + Hyperparameter Tuning
+
+Random Forest + Upsampling + Hyperparameter Tuning
 This model exceeded the required F1 ≥ 0.59 on validation.
 
 Final Test Set Evaluation
-After selecting the best model, you evaluated it once on the test set:
+
+After selecting the best model, we evaluated it once on the test set:
 Final Metrics
 F1 Score: 0.59
 AUC‑ROC: 0.8320
@@ -110,6 +115,7 @@ Class 1 (Churned): Precision 0.68, Recall 0.52
 The model performs strongly at ranking customers by churn risk (high AUC‑ROC) and meets the required F1 threshold.
 
 Business Impact
+
 With this model, Beta Bank can:
 Identify high‑risk customers early
 Launch targeted retention campaigns
@@ -118,6 +124,7 @@ Reduce churn and increase customer lifetime value
 The combination of upsampling + tuned Random Forest provides a reliable, production‑ready churn prediction pipeline
 
 How to Run
+
 Load the dataset (Churn.csv)
 Run preprocessing steps
 Encode categorical features

@@ -8,6 +8,7 @@ Project Overview
 Beta Bank is experiencing customer churn — clients are gradually leaving every month. Since retaining existing customers is significantly cheaper than acquiring new ones, the bank wants a predictive model that identifies customers at risk of leaving.
 
 My Task:
+
 Build a machine learning model that predicts customer churn with an F1 score ≥ 0.59 on the test dataset.  
 Additionally, compute and compare the AUC‑ROC metric to evaluate ranking quality.
 This project demonstrates:
